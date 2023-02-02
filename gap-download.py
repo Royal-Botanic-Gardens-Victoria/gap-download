@@ -45,7 +45,7 @@ def download(i):
 
 	for package in result['results']:
 
-		print(package)
+		#print(package)
 		
 		if 'scientific_name' in package.keys():
 			g2.write(value1+"\t"+package['scientific_name']+"\n")	
@@ -62,10 +62,11 @@ def download(i):
 			
 			print("downloading",url)
 			
-			input()
+			#input()
 			
 			p0=sp.Popen('curl -O -L -C - -H "Authorization: 705a5c04-68d4-49a0-bf90-b637e81d6bbb" "{}"'.format(url),shell=True).wait()
 			p1=sp.Popen("mv {} {}".format(filename,outfolder+"/"),shell=True).wait()
+			
 			
 #######global
 

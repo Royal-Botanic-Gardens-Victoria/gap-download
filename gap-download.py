@@ -82,13 +82,13 @@ g2=open("sample_list_spp.txt",'a')
 
 if __name__ == '__main__':
 		
-	#executor1 = concurrent.futures.ProcessPoolExecutor(threads)
-	#futures1 = [executor1.submit(download,i) for i in f]
-	#concurrent.futures.wait(futures1)
+	executor1 = concurrent.futures.ProcessPoolExecutor(threads)
+	futures1 = [executor1.submit(download,i) for i in f]
+	concurrent.futures.wait(futures1)
 
-	for i in f:
+	#for i in f:
 	
-		download(i)
+		#download(i)
 	
 					
 					
